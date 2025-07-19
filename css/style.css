@@ -1,0 +1,123 @@
+/* NASA Branding: Use NASA's official font and colors for modal */
+
+/* Use NASA's font: 'Roboto', fallback to Arial and sans-serif */
+body, .modal-content {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* Modal overlay styles - dark blue background inspired by NASA */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(13, 30, 64, 0.85); /* NASA blue with transparency */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+/* Modal content styles - white background, NASA red border */
+.modal-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 8px;
+  position: relative;
+  max-width: 600px;
+  width: 90vw;
+  box-shadow: 0 2px 20px rgba(0,0,0,0.3);
+  text-align: center;
+  border: 3px solid #fc3d21; /* NASA red */
+}
+
+/* Modal close button - NASA red color */
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 20px;
+  color: #fc3d21; /* NASA red */
+  font-weight: bold;
+  cursor: pointer;
+}
+
+/* Headings in modal - NASA blue */
+.modal-content h2 {
+  color: #0d1e40; /* NASA blue */
+  margin-top: 1em;
+}
+
+/* Date and explanation text - dark gray for readability */
+.modal-content p {
+  color: #222;
+}
+
+/* Add a NASA logo to the modal (optional for branding) */
+.modal-content::before {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 0 auto 1em auto;
+  background: url('https://www.nasa.gov/sites/all/themes/custom/nasatwo/images/nasa-logo.svg') no-repeat center/contain;
+}
+
+/* Style for the "Did You Know?" space fact section */
+.space-fact {
+  background: #e5e9f7;
+  border-left: 6px solid #fc3d21; /* NASA red */
+  color: #0d1e40; /* NASA blue */
+  font-size: 1.1em;
+  margin: 2em 0 1em 0;
+  padding: 1em 1.5em;
+  border-radius: 6px;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+/* Smooth scaling effect for gallery images on hover */
+.image-card img {
+  transition: transform 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.08);
+}
+
+/* Gallery layout: show images in horizontal rows */
+.gallery {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to next row */
+  gap: 1.5em;      /* Space between cards */
+  justify-content: center; /* Center the gallery items */
+  margin-top: 2em;
+}
+
+/* Each image card in the gallery */
+.image-card {
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(13, 30, 64, 0.12);
+  border: 2px solid #e5e9f7;
+  padding: 1em;
+  width: 250px;
+  text-align: center;
+  transition: box-shadow 0.2s;
+}
+
+.image-card:hover {
+  box-shadow: 0 4px 20px rgba(13, 30, 64, 0.18);
+}
+
+/* Make images fit nicely inside cards */
+.image-card img {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  /* ...existing scaling effect... */
+  transition: transform 0.3s ease;
+}
+
+.image-card img:hover {
+  transform: scale(1.08);
+}
